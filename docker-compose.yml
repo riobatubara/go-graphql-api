@@ -4,8 +4,8 @@ services:
     image: postgres:15-alpine
     container_name: library_postgres_db
     environment:
-      POSTGRES_USER: lib_admin
-      POSTGRES_PASSWORD: lib_secure_pass
+      POSTGRES_USER: lib_user
+      POSTGRES_PASSWORD: lib_password
       POSTGRES_DB: library_db
     ports:
       - "5432:5432"
