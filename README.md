@@ -80,6 +80,7 @@ query {
   }
 }
 ```
+![graphql get book](./graphql-get-book.png)
 
 ### 3. Fetch Single Book by ID (GET Equivalent)
 Pass an explicit argument target ID parameter string to query a singular entity record:
@@ -92,6 +93,7 @@ query {
   }
 }
 ```
+![graphql get book by id](./graphql-get-book-by-id.png)
 
 ### 4. Create a New Book (POST Equivalent)
 Switch your body syntax layout to a mutation block structure to write a new record into your live container:
@@ -111,3 +113,4 @@ mutation {
   }
 }
 ```
+![graphql create book](./graphql-create-book.png)
