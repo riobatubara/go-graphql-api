@@ -1,0 +1,44 @@
+type Category {
+  id: ID!
+  name: String!
+}
+
+type Book {
+  id: ID!
+  title: String!
+  author: String!
+  isbn: String!
+  category: Category
+}
+
+type Loan {
+  id: ID!
+  book: Book!
+  borrowerName: String!
+  loanDate: String!
+  returnDate: String
+}
+
+type Query {
+  books: [Book!]!
+  book(id: ID!): Book
+  categories: [Category!]!
+  loans: [Loan!]!
+}
+
+input CreateBookInput {
+  title: String!
+  author: String!
+  isbn: String!
+  categoryId: Int!
+}
+
+input CreateLoanInput {
+  bookId: Int!
+  borrowerName: String!
+}
+
+type Mutation {
+  createBook(input: CreateBookInput!): Book!
+  createLoan(input: CreateLoanInput!): Loan!
+}
